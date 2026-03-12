@@ -6,7 +6,7 @@ function Navbar() {
         {/* Avatar + Nome */}
         <div className="flex items-center gap-2">
           <img
-            src="/src/assets/icons/avatares/meu avatar.png"
+            src="/images/meu avatar.png"
             alt="Meu avatar"
             className="w-17 h-12 rounded-full object-cover"
           />
@@ -26,7 +26,7 @@ function Navbar() {
 
         {/* Botão */}
         <img
-            src="/src/assets/icons/avatares/gifkratos.gif"
+            src="/images/avatares/gifkratos.gif"
             alt="Meu avatar"
             className="w-12 h-12 rounded-full object-cover"
           />

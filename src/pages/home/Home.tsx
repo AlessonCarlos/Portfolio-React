@@ -45,7 +45,7 @@ function Home() {
 
         <div className="w-100">
           <img
-            src="/src/assets/img/avatar-sem-fundo.png"
+            src="/images/avatar-sem-fundo.png"
             alt="dev"
             className="animate-float"
           />
@@ -57,7 +57,7 @@ function Home() {
       <section className="max-w-6xl mx-auto px-6 py-20 flex gap-12 items-center">
 
         <img
-          src="/src/assets/img/about-image.png"
+          src="/images/about-image.png"
           alt="perfil"
           className="w-60 h-60 rounded-full object-cover"
         />
