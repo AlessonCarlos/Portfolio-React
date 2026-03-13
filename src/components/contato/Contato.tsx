@@ -3,7 +3,6 @@ import { toast } from "react-hot-toast";
 
 const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
 
-
     const form = e.currentTarget;
 
     const nome = (form.elements.namedItem("nome") as HTMLInputElement).value;
@@ -12,28 +11,31 @@ const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     const mensagem = (form.elements.namedItem("mensagem") as HTMLInputElement).value;
 
     if (nome.length < 3) {
+        e.preventDefault();
         toast.error("O Nome precisa ter pelo menos 3 caracteres");
         return;
     }
 
     if (!email.includes("@")) {
+        e.preventDefault();
         toast.error("Digite um email válido");
         return;
     }
 
     if (assunto.length < 5) {
+        e.preventDefault();
         toast.error("O assunto precisa ter pelo menos 5 caracteres");
         return;
     }
 
     if (mensagem.length === 0) {
+        e.preventDefault();
         toast.error("Mensagem não pode estar vazia");
         return;
     }
 
-    toast.success("Mensagem enviada com sucesso!")
+    toast.success("Mensagem enviada com sucesso!");
 }
-
 
 function Contato() {
     return (
