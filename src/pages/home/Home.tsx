@@ -3,7 +3,7 @@ function Home() {
     <main className="bg-slate-900 text-white min-h-screen">
 
       
-      <section className="max-w-6xl mx-auto flex flex-col-reverse lg:flex-row items-center justify-between px-4 sm:px-6 py-16 sm:py-20 gap-10">
+      <section  className="max-w-6xl mx-auto flex flex-col-reverse lg:flex-row items-center justify-between px-4 sm:px-6 py-16 sm:py-20 gap-10">
 
         
         <div className="max-w-xl text-center lg:text-left">
@@ -50,7 +50,7 @@ function Home() {
       </section>
 
       
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-20 flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
+      <section id="about" className="max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-20 flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
 
         <img
           src="/images/about-image.png"

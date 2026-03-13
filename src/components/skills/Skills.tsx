@@ -1,11 +1,12 @@
-import { SiTypescript, SiNodedotjs, SiMysql, SiAew, SiGit, SiGithub, SiLinux, SiReact, SiTailwindcss} from "react-icons/si";
+import { SiTypescript, SiNodedotjs, SiMysql, SiGit, SiGithub, SiLinux, SiReact, SiTailwindcss} from "react-icons/si";
+import { FaAws } from "react-icons/fa"; 
 
 const techs = [
   { name: "TypeScript", icon: <SiTypescript className="w-6 h-6 sm:w-8 sm:h-8 text-blue-600" /> },
   { name: "Node.js", icon: <SiNodedotjs className="w-6 h-6 sm:w-8 sm:h-8 text-green-400" /> },
   { name: "NestJS", icon: <SiNodedotjs className="w-6 h-6 sm:w-8 sm:h-8 text-green-600" /> }, 
   { name: "MySQL", icon: <SiMysql className="w-6 h-6 sm:w-8 sm:h-8 text-blue-500" /> },
-  { name: "AWS", icon: <SiAew className="w-6 h-6 sm:w-8 sm:h-8 text-orange-400" /> },
+  { name: "AWS", icon: <FaAws  className="w-6 h-6 sm:w-8 sm:h-8 text-orange-400" /> },
   { name: "React", icon: <SiReact className="w-6 h-6 sm:w-8 sm:h-8 text-sky-400" /> },
   { name: "Tailwind", icon: <SiTailwindcss className="w-6 h-6 sm:w-8 sm:h-8 text-sky-600" /> },
   { name: "Git / GitHub", icon: <><SiGit className="w-6 h-6 sm:w-8 sm:h-8 text-orange-500" /><SiGithub className="w-6 h-6 sm:w-8 sm:h-8 text-gray-400" /></> },
@@ -14,7 +15,7 @@ const techs = [
 
 export default function Skills() {
   return (
-    <section className="bg-slate-900 py-20">
+    <section id="skills" className="bg-slate-900 py-20">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <h2 className="text-3xl sm:text-4xl font-bold text-white mb-10 text-center sm:text-left">Habilidades</h2>
 

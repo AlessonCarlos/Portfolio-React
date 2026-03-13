@@ -46,8 +46,8 @@ function Projects() {
     ]);
 
     return React.createElement(
-        "section",
-        { className: "bg-slate-900 py-20" },
+        "section", 
+        { id: "projects", className: "bg-slate-900 py-20" },
         React.createElement(
             "div",
             { className: "max-w-6xl mx-auto px-6" },
