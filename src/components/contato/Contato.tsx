@@ -10,15 +10,15 @@ const contatoSchema = z.object({
     nome: z.string()
         .min(3, "O nome precisa ter pelo menos 3 caracteres")
         .max(50, "O nome pode ter no máximo 50 caracteres"),
-    
+
     email: z.string()
         .email("Digite um email válido")
         .min(1, "O email é obrigatório"),
-    
+
     assunto: z.string()
         .min(5, "O assunto precisa ter pelo menos 5 caracteres")
         .max(100, "O assunto pode ter no máximo 100 caracteres"),
-    
+
     mensagem: z.string()
         .min(1, "A mensagem não pode estar vazia")
         .max(500, "A mensagem pode ter no máximo 500 caracteres")
@@ -47,16 +47,22 @@ function Contato() {
             formData.append("email", data.email);
             formData.append("assunto", data.assunto);
             formData.append("mensagem", data.mensagem);
-            
-            formData.append("_next", "https://portfolio-react-beryl-eight.vercel.app/sucesso");
+
             formData.append("_captcha", "false");
             formData.append("_template", "table");
+            formData.append("_subject", "Nova mensagem do portfólio");
             formData.append("_autoresponse", "Recebi sua mensagem! Em breve entro em contato.");
 
-            const response = await fetch("https://formsubmit.co/6646b14593aaa66d4ebb0af7afb38b23", {
-                method: "POST",
-                body: formData
-            });
+            const response = await fetch(
+                "https://formsubmit.co/6646b14593aaa66d4ebb0af7afb38b23",
+                {
+                    method: "POST",
+                    body: formData,
+                    headers: {
+                        Accept: "application/json"
+                    }
+                }
+            );
 
             if (response.ok) {
                 toast.success("Mensagem enviada com sucesso!");
@@ -108,8 +114,8 @@ function Contato() {
                             type="text"
                             placeholder="Digite o seu nome completo"
                             className={`bg-slate-700 text-white p-3 rounded-md outline-none w-full transition-all
-                                ${errors.nome 
-                                    ? 'border-2 border-red-500 focus:ring-2 focus:ring-red-500' 
+                                ${errors.nome
+                                    ? 'border-2 border-red-500 focus:ring-2 focus:ring-red-500'
                                     : 'focus:ring-2 focus:ring-sky-500'
                                 }`}
                             {...register("nome")}
@@ -126,8 +132,8 @@ function Contato() {
                             type="email"
                             placeholder="Digite o seu e-mail"
                             className={`bg-slate-700 text-white p-3 rounded-md outline-none w-full transition-all
-                                ${errors.email 
-                                    ? 'border-2 border-red-500 focus:ring-2 focus:ring-red-500' 
+                                ${errors.email
+                                    ? 'border-2 border-red-500 focus:ring-2 focus:ring-red-500'
                                     : 'focus:ring-2 focus:ring-sky-500'
                                 }`}
                             {...register("email")}
@@ -144,8 +150,8 @@ function Contato() {
                             type="text"
                             placeholder="Qual é o assunto da sua mensagem?"
                             className={`bg-slate-700 text-white p-3 rounded-md outline-none w-full transition-all
-                                ${errors.assunto 
-                                    ? 'border-2 border-red-500 focus:ring-2 focus:ring-red-500' 
+                                ${errors.assunto
+                                    ? 'border-2 border-red-500 focus:ring-2 focus:ring-red-500'
                                     : 'focus:ring-2 focus:ring-sky-500'
                                 }`}
                             {...register("assunto")}
@@ -162,8 +168,8 @@ function Contato() {
                             rows={4}
                             placeholder="Digite sua mensagem aqui..."
                             className={`bg-slate-700 text-white p-3 rounded-md outline-none w-full transition-all resize-none
-                                ${errors.mensagem 
-                                    ? 'border-2 border-red-500 focus:ring-2 focus:ring-red-500' 
+                                ${errors.mensagem
+                                    ? 'border-2 border-red-500 focus:ring-2 focus:ring-red-500'
                                     : 'focus:ring-2 focus:ring-sky-500'
                                 }`}
                             {...register("mensagem")}

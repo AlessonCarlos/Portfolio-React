@@ -2,7 +2,7 @@
 import { Link } from "react-router-dom";
 function Sucesso() {
     return (
-        <section className="bg-slate-900 min-h-screen flex items-center justify-center px-4">
+        <section  className="animate-float  bg-slate-900 min-h-screen flex items-center justify-center px-4">
             <div className="bg-slate-800 p-10 rounded-xl text-center max-w-md w-full">
 
                 <div className="text-5xl mb-4">✅</div>
