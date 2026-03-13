@@ -26,7 +26,7 @@ function Navbar() {
 
         {/* Botão */}
         <img
-            src="/images/avatares/gifkratos.gif"
+            src="/images/gifkratos.gif"
             alt="Meu avatar"
             className="w-12 h-12 rounded-full object-cover"
           />
